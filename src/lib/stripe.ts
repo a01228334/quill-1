@@ -21,7 +21,7 @@ export async function getUserSubscriptionPlan() {
     }
   }
 
-  const dbUser = await db.user.findFirst({
+  const dbUser = db.user.findFirst({
     where: {
       id: user.id,
     },
@@ -30,9 +30,9 @@ export async function getUserSubscriptionPlan() {
   if (!dbUser) {
     return {
       ...PLANS[0],
-      isSubscribed: false,
-      isCanceled: false,
-      stripeCurrentPeriodEnd: null,
+      isSubscribed: true,
+      isCanceled: true,
+      // stripeCurrentPeriodEnd: null,
     }
   }
 
