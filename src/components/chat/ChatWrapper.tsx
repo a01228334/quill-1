@@ -82,13 +82,13 @@ const ChatWrapper = ({
             <p className='text-zinc-500 text-sm'>
               Your{' '}
               <span className='font-medium'>
-                {isSubscribed ? 'Pro' : 'Pro'}
+                {isSubscribed ? 'Pro' : 'Free'}
               </span>{' '}
               plan supports up to{' '}
               {isSubscribed
                 ? PLANS.find((p) => p.name === 'Pro')
                     ?.pagesPerPdf
-                : PLANS.find((p) => p.name === 'Pro')
+                : PLANS.find((p) => p.name === 'Free')
                     ?.pagesPerPdf}{' '}
               pages per PDF.
             </p>

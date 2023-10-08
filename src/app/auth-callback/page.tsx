@@ -15,8 +15,6 @@ const Page = () => {
       if (success) {
         // user is synced to db
         router.push(origin ? `/${origin}` : '/dashboard')
-      } else{
-        router.push(origin ? `/${origin}` : '/dashboard')
       }
     },
     onError: (err) => {

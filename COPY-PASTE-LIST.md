@@ -7,6 +7,7 @@ Built with the Next.js 13.5 App Router, tRPC, TypeScript, Prisma & Tailwind
 
   
 
+![Project Image](https://github.com/joschan21/quill/blob/master/public/thumbnail.png)
 
   
 
