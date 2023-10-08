@@ -12,8 +12,10 @@ const Page = () => {
 
   trpc.authCallback.useQuery(undefined, {
     onSuccess: ({ success }) => {
-      if (success || !success) {
+      if (success) {
         // user is synced to db
+        router.push(origin ? `/${origin}` : '/dashboard')
+      } else{
         router.push(origin ? `/${origin}` : '/dashboard')
       }
     },
