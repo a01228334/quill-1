@@ -7,7 +7,6 @@ export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? '', {
   apiVersion: '2023-08-16',
   typescript: true,
 })
-//stripe
 
 export async function getUserSubscriptionPlan() {
   const { getUser } = getKindeServerSession()
@@ -22,7 +21,7 @@ export async function getUserSubscriptionPlan() {
     }
   }
 
-  const dbUser = db.user.findFirst({
+  const dbUser = await db.user.findFirst({
     where: {
       id: user.id,
     },
